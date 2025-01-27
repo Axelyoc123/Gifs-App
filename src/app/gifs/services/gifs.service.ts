@@ -11,7 +11,6 @@ export class GifsService {
   private serviceUrl:string='https://api.giphy.com/v1/gifs';
   constructor(private http:HttpClient) {
     this.loadLocalStorage();
-    console.log('Gifs service ready');
   }
   get tagHistory(){
     return [...this._tagsHistory];//*hara una copia de la busqueda creo
@@ -57,7 +56,6 @@ export class GifsService {
     this.http.get<SearchResponse>(`${this.serviceUrl}/search`,{params:params})
     .subscribe((resp)=>{
       this.gifList=resp.data
-      console.log({gifs:this.gifList})
     })
   }
 
