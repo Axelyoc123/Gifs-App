@@ -47,7 +47,7 @@ export class GifsService {
     this.organizeHistory(tag);
     const params=new HttpParams()
     .set('api_key',this.apiKey)
-    .set('limit','10')
+    .set('limit','12')
     .set('q',tag)
     //*forma de hacer la peticion http con fetch
     // fetch('https://api.giphy.com/v1/gifs/search?api_key=6lHPrx9lXT6PmiACS0C8AM7VCWPNrz5Y&q=valorant&limit=10')
